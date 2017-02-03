@@ -72,54 +72,64 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__suma_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__suma_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__suma_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resta_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resta_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__resta_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__subtract_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__show_js__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sumando", function() { return sumando; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "restando", function() { return restando; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showing", function() { return showing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return add; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subtract", function() { return subtract; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "show", function() { return show; });
 
 
 
 
-console.log('[] -> calculadora ', __WEBPACK_IMPORTED_MODULE_0__suma_js__);
+console.log('[] -> Calculator show', __WEBPACK_IMPORTED_MODULE_2__show_js__);
 
-let sumando = __WEBPACK_IMPORTED_MODULE_0__suma_js__["operacionSuma"];
-let restando = __WEBPACK_IMPORTED_MODULE_1__resta_js__["operacionResta"];
-let showing = __WEBPACK_IMPORTED_MODULE_2__show_js__["operationShow"];
+let add = __WEBPACK_IMPORTED_MODULE_0__add_js__["a" /* add */];
+let subtract = __WEBPACK_IMPORTED_MODULE_1__subtract_js__["a" /* subtract */];
+let show = __WEBPACK_IMPORTED_MODULE_2__show_js__["show"];
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function resta(a, b) {
-	return a - b;
-}
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return add; });
+let add;
 
-console.log('[] -> function resta ');
+add = function add(a, b) {
+	return a + b;
+};
 
-exports.operacionResta = resta;
+
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var show = valueShow => {
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "show", function() { return show; });
+let show;
+
+show = valueShow => {
 	console.log('operaciones con:', valueShow);
 };
 
-console.log('[] -> function show ');
 
-exports.operationShow = show;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected { (9:7)\n\n\u001b[0m \u001b[90m  7 | \u001b[39mconsole\u001b[33m.\u001b[39mlog(\u001b[32m'[] -> function suma '\u001b[39m)\n \u001b[90m  8 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m\u001b[36mexport\u001b[39m operationSuma\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 | \u001b[39m\u001b[0m\n");
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return subtract; });
+let subtract;
+
+subtract = function subtract(a, b) {
+	return a - b;
+};
+
+
 
 /***/ }),
 /* 4 */
@@ -127,18 +137,18 @@ throw new Error("Module build failed: SyntaxError: Unexpected token, expected { 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_modules_calculadora_js__ = __webpack_require__(0);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__calculator_js__ = __webpack_require__(0);
+console.log('la otra noche');
 
 var a = 54;
 var b = 12;
 
-console.log('OPOPOP', __WEBPACK_IMPORTED_MODULE_0__js_modules_calculadora_js__);
+console.log('OPOPOP', __WEBPACK_IMPORTED_MODULE_0__calculator_js__);
 
 console.log('[ run module ] -> main');
-// operaciones.showing([a, b].toString());
-console.log('sumando: ', __WEBPACK_IMPORTED_MODULE_0__js_modules_calculadora_js__["sumando"](a, b));
-// console.log( 'restando: ', operaciones.restando(a, b) );
+__WEBPACK_IMPORTED_MODULE_0__calculator_js__["show"]([a, b].toString());
+console.log('adding: ', __WEBPACK_IMPORTED_MODULE_0__calculator_js__["add"](a, b));
+console.log('subtracting: ', __WEBPACK_IMPORTED_MODULE_0__calculator_js__["subtract"](a, b));
 
 /***/ })
 /******/ ]);

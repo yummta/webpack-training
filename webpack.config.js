@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 const config = {
-	entry: './main.js',
+	entry: './js-modules/main.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].js'
